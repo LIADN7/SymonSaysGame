@@ -1,0 +1,7 @@
+<data>
+    <NumberOfButtons>5</NumberOfButtons>
+    <StepPoints>2</StepPoints>
+    <GameTime>45</GameTime>
+    <IsRepeat>true</IsRepeat>
+    <GameSpeed>1.25</GameSpeed>
+</data>
