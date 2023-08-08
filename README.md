@@ -44,7 +44,12 @@ The game concludes under the following circumstances:
 3. Follow the in-game instructions to start playing and replicating color sequences.
 
 ### Or
-**[Play online]()**
+Play local with exe file
+
+**[Download](https://liadn7.itch.io/symonsays/purchase)**
+
+### Or
+---[Play online (In process)]()---
 
 
 ## Acknowledgements
@@ -57,4 +62,4 @@ We acknowledge the inspiration and idea for this game from the classic "Simon Sa
 The Symon Says - Color Sequence Challenge is an engaging and entertaining game that puts players' memory and reaction abilities to the test. Challenge yourself and compete with others for a coveted spot on the leaderboard!
 
 
-**[@authors liadn7](https://github.com/liadn7)**
+**[@Author liadn7](https://github.com/liadn7)**
