@@ -1,5 +1,8 @@
 # Symon Says - Color Sequence Challenge
 
+<img src="https://github.com/LIADN7/SymonSaysGame/blob/main/Assets/Assets/Pok%C3%A9_Ball.png" data-canonical-src="https://github.com/LIADN7/SymonSaysGame/blob/main/Assets/Assets/Pok%C3%A9_Ball.png" width="400" height="400" />
+
+
 ## Description
 
 Symon Says - Color Sequence Challenge is an exciting memory and reaction game designed to test and enhance players' memory skills and their ability to follow instructions. Players must accurately replicate a dynamically evolving sequence of colors displayed by the computer.
@@ -13,6 +16,8 @@ Symon Says - Color Sequence Challenge is an exciting memory and reaction game de
 - **Player's Turn:** After the color sequence is displayed, it's the player's turn to recreate it. Players achieve this by clicking or tapping on the colors in the precise order they were originally presented.
 
 - **Progression and Difficulty:** As the game advances, the color sequences become progressively longer and more intricate, challenging players' memory and concentration.
+
+![](https://github.com/LIADN7/SymonSaysGame/blob/main/Assets/Assets/GamePlay.gif)
 
 ## Game End Conditions
 
@@ -39,7 +44,7 @@ The game concludes under the following circumstances:
 3. Follow the in-game instructions to start playing and replicating color sequences.
 
 ### Or
-[Play online]()
+**[Play online]()**
 
 
 ## Acknowledgements
@@ -50,3 +55,6 @@ We acknowledge the inspiration and idea for this game from the classic "Simon Sa
 ---
 
 The Symon Says - Color Sequence Challenge is an engaging and entertaining game that puts players' memory and reaction abilities to the test. Challenge yourself and compete with others for a coveted spot on the leaderboard!
+
+
+**[@authors liadn7](https://github.com/liadn7)**
