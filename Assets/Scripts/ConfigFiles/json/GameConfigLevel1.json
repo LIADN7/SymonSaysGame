@@ -2,6 +2,6 @@
     "NumberOfButtons": 4,
     "StepPoints": 1,
     "GameTime": 50,
-    "IsRepeat": true,
+    "IsRepeat": false,
     "GameSpeed": 1
 }

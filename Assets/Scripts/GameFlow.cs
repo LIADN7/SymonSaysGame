@@ -2,8 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameFlow : MonoBehaviour
 {
@@ -20,6 +20,7 @@ public class GameFlow : MonoBehaviour
     void Start()
     {
         playerNameText.text= GameManager.inst.getPlayerName();
+        GameManager.inst.resetScore();
         for (int i = GameManager.inst.getNumberOfButtons(); i < Buttons.Length; i++)
         {
             Buttons[i].SetActive(false);
@@ -67,6 +68,10 @@ public class GameFlow : MonoBehaviour
                 StartCoroutine(playNewSequence(SECONDS_TO_WAIT));
             }
         }
+        else if(i != gamePlay.First.Value)
+        {
+            gameOver();
+        }
         
 
         // The sequence has finished. I add any additional code here if needed.
@@ -84,13 +89,19 @@ public class GameFlow : MonoBehaviour
 
     IEnumerator PlayAllSequence()
     {
-        foreach (int num in gameSequence)
+        if (GameManager.inst.getIsRepeat())
         {
-            yield return StartCoroutine(startAnimation(num));
+            foreach (int num in gameSequence)
+            {
+                yield return StartCoroutine(startAnimation(num));
+            }
+        }
+        else
+        {
+            yield return StartCoroutine(startAnimation(gameSequence.Last.Value));
         }
         gamePlay = new LinkedList<int>(gameSequence);
         this.isOnPlay = false;
-        // The sequence has finished. I add any additional code here if needed.
     }
 
     IEnumerator startAnimation(int i)
@@ -110,7 +121,7 @@ public class GameFlow : MonoBehaviour
     {
 
         int max =  GameManager.inst.getNumberOfButtons();
-        return Random.Range(0, max) ;
+        return UnityEngine.Random.Range(0, max) ;
     }
 
 
@@ -127,5 +138,19 @@ public class GameFlow : MonoBehaviour
 
         // Countdown finished, show 0 seconds
         secondsText.text = "0";
+        gameOver();
     }
+
+
+    private void gameOver()
+    {
+        GameManager.inst.addToLeaderBoard();
+        SceneManager.LoadScene("LeadBoard");
+
+    }
+
+    // Add to sorted leaderboard 
+
+
+
 }
