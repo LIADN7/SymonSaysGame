@@ -170,10 +170,6 @@ public class BonusGameFlow : MonoBehaviour
         StartCoroutine(gameOver()); // End the game when the countdown timer finishes
     }
 
-    public int getTimeRemains()
-    {
-        return this.timeRemains;
-    }
     IEnumerator gameOver()
     {
         GameManager.inst.addToLeaderBoard();
@@ -186,5 +182,9 @@ public class BonusGameFlow : MonoBehaviour
 
     }
 
+    public int getTimeRemains()
+    {
+        return this.timeRemains;
+    }
 
 }

@@ -1,5 +1,6 @@
 using Newtonsoft.Json;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Xml;
@@ -7,6 +8,8 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
+// The `ConfigSetting` class handles configuration settings for a game and provides methods to load game settings from XML or JSON files.
 public class ConfigSetting : MonoBehaviour
 {
 
@@ -14,11 +17,13 @@ public class ConfigSetting : MonoBehaviour
     [SerializeField] private TMP_Dropdown fileType;
     [SerializeField] private TMP_Text configText;
     [SerializeField] private TMP_Text playerNameText;
+    [SerializeField] private GameObject SpeechBalloon;
     private string fileTypeName="json";
 
     void Start()
     {
         fileType.onValueChanged.AddListener(FormatDropdownValueChanged);
+        this.SpeechBalloon.SetActive(false);
     }
 
     private void FormatDropdownValueChanged(int index)
@@ -26,6 +31,7 @@ public class ConfigSetting : MonoBehaviour
         this.fileTypeName = fileType.options[index].text;
     }
 
+    // Gets the configuration setting based on the selected file type (XML or JSON).
     public void getConfigSetting()
     {
 
@@ -39,6 +45,10 @@ public class ConfigSetting : MonoBehaviour
             {
                 getJsonConfigSetting();
             }
+        }
+        else
+        {
+            StartCoroutine(setSpeechBalloon());
         }
 
     }
@@ -180,6 +190,18 @@ public class ConfigSetting : MonoBehaviour
             GameManager.inst.setPlayerName(playerNameText.text);
             SceneManager.LoadScene("BonusGame");
         }
+        else
+        {
+            StartCoroutine(setSpeechBalloon());
+        }
     }
 
+
+    IEnumerator setSpeechBalloon()
+    {
+
+        this.SpeechBalloon.SetActive(true);
+        yield return new WaitForSeconds(4);
+        this.SpeechBalloon.SetActive(false);
+    }
 }

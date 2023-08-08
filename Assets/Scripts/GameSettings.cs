@@ -1,9 +1,4 @@
 
-using System;
-using System.Diagnostics;
-using System.IO;
-using Newtonsoft.Json;
-using UnityEditor.PackageManager;
 
 public class GameSettings
 {
