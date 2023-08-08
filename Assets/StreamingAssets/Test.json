@@ -1,7 +1,7 @@
 {
-    "NumberOfButtons": 4,
+    "NumberOfButtons": "4",
     "StepPoints": 1,
     "GameTime": 50,
-    "IsRepeat": false,
+    "IsRepeat": true,
     "GameSpeed": 1
 }

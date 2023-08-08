@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameFlow : MonoBehaviour
+public class BonusGameFlow : MonoBehaviour
 {
     // Serialized fields for UI elements and variables
     [SerializeField] protected TMP_Text scoreText; // Text element to display the player's score
@@ -14,20 +14,16 @@ public class GameFlow : MonoBehaviour
     [SerializeField] protected GameObject[] Buttons; // Array of GameObjects representing buttons
     private LinkedList<int> gameSequence; // Linked list to store the game sequence
     private LinkedList<int> gamePlay; // Linked list to store the current player's input sequence
-    private bool isOnPlay = true; // Game state: 0 = Play sequence, 1 = player turn, 2 = in progress of play
+    private bool isOnPlay = true; // 
     private float gameSpeed = 3f; // Speed of button rotation animation
     private float SECONDS_TO_WAIT = 0.5f; // Time to wait before starting a new sequence
-    private int timeRemains=60;
+    private int timeRemains=160;
 
 
     void Start()
     {
         playerNameText.text = GameManager.inst.getPlayerName(); // Set the player's name on UI
         GameManager.inst.resetScore(); // Reset the player's score
-        for (int i = GameManager.inst.getNumberOfButtons(); i < Buttons.Length; i++)
-        {
-            Buttons[i].SetActive(false); // Deactivate extra buttons that exceed the configured number
-        }
         this.gameSequence = new LinkedList<int>(); // Initialize the game sequence linked list
         gameSpeed -= GameManager.inst.getGameSpeed(); // Adjust game speed based on configuration
         for (int i = 0; i < GameManager.inst.getNumberOfButtons(); i++)
@@ -38,10 +34,6 @@ public class GameFlow : MonoBehaviour
         StartCoroutine(StartCountdown()); // Start the countdown timer
     }
 
-    void Update()
-    {
-
-    }
 
 
     // Called when a button is clicked during player's turn
@@ -65,12 +57,11 @@ public class GameFlow : MonoBehaviour
             this.isOnPlay = false;
             if (gamePlay.Count == 0)
             {
-                StartCoroutine(playNewSequence(SECONDS_TO_WAIT)); // Start playing a new sequence
+                StartCoroutine(gameOver());
             }
         }
         else if(i != gamePlay.First.Value)
         {
-            GameManager.inst.resetScore();
             StartCoroutine(gameOver()); // Game over if wrong input
         }
         
@@ -82,10 +73,54 @@ public class GameFlow : MonoBehaviour
     {
         this.isOnPlay = true;
         yield return new WaitForSeconds(waitSec);
-        this.gameSequence.AddLast(getNextRand()); // Generate and add a new random input to the sequence
+        createSongSequence(); // Create song the sequence
+        
         StartCoroutine(PlayAllSequence()); // Start playing the entire sequence
     }
     
+
+    private void createSongSequence()
+    {
+        // pi - ka - chu
+        this.gameSequence.AddLast(0);
+        this.gameSequence.AddLast(1);
+        this.gameSequence.AddLast(2);
+
+        // pi - ka - chu
+        this.gameSequence.AddLast(0);
+        this.gameSequence.AddLast(1);
+        this.gameSequence.AddLast(2);
+
+        // pi - ka
+        this.gameSequence.AddLast(0);
+        this.gameSequence.AddLast(1);
+
+        // pi - ka
+        this.gameSequence.AddLast(0);
+        this.gameSequence.AddLast(1);
+
+        // pi - ka - chu
+        this.gameSequence.AddLast(0);
+        this.gameSequence.AddLast(1);
+        this.gameSequence.AddLast(2);
+
+        // pikachu
+        this.gameSequence.AddLast(5);
+
+        // pika pikachu
+        this.gameSequence.AddLast(3);
+        this.gameSequence.AddLast(5);
+
+        // pika pikachu
+        this.gameSequence.AddLast(3);
+        this.gameSequence.AddLast(5);
+
+        // pikaaaaa pikachu
+        this.gameSequence.AddLast(4);
+        this.gameSequence.AddLast(5);
+    }
+
+
     // Coroutine to play the entire game sequence
     IEnumerator PlayAllSequence()
     {
@@ -117,13 +152,6 @@ public class GameFlow : MonoBehaviour
 
     }
 
-    // Generate a random next input for the sequence
-    private int getNextRand()
-    {
-
-        int max =  GameManager.inst.getNumberOfButtons();
-        return UnityEngine.Random.Range(0, max) ;
-    }
 
     // Coroutine to start the countdown timer
     IEnumerator StartCountdown()

@@ -6,19 +6,16 @@ public class RotateAnimation : MonoBehaviour
 {
 
 
-    private float rotationSpeed = 40f;
-    private bool rotateLeft = true;
-    private bool showAnim = false;
+    private float rotationSpeed = 40f; // Base rotation speed in degrees per second
+    private bool rotateLeft = true; // Flag to control rotation direction
+    private bool showAnim = false; // Flag to determine whether the rotation animation is active
 
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
+
     void Update()
     {   
         if (showAnim) { 
+            // If the object's rotation is between certain angles, change rotation direction
             if (transform.rotation.eulerAngles.z >= 15f && transform.rotation.eulerAngles.z <= 335f)
             {
                 rotateLeft = !rotateLeft;
@@ -30,22 +27,23 @@ public class RotateAnimation : MonoBehaviour
         }
     }
 
-
+    // Activate or deactivate the rotation animation
     public void setRotateAnim(bool flag)
     {
-        //if(!flag) transform.Rotate(0f, 0f, 0f);
-        GetComponent<SpriteRenderer>().color = Color.gray;
-        GetComponent<AudioSource>().Play();
-        showAnim =flag;
+        GetComponent<SpriteRenderer>().color = Color.gray; // Change the sprite color during animation
+        GetComponent<AudioSource>().Play(); // Play an audio clip
+        showAnim = flag;
     }
 
+    // Reset the object's rotation to its initial state
     public void ResetRotationToZero()
     {
-        GetComponent<AudioSource>().Stop();
-        GetComponent<SpriteRenderer>().color = Color.white;
-        transform.rotation = Quaternion.identity;
+        GetComponent<AudioSource>().Stop(); // Stop the audio clip
+        GetComponent<SpriteRenderer>().color = Color.white; // Reset the sprite color
+        transform.rotation = Quaternion.identity; // Reset the rotation to zero
     }
 
+    // Multiply the rotation speed by a given factor
     public void multSpeed(float s)
     {
         this.rotationSpeed *= s;

@@ -9,7 +9,7 @@ public class LeadboardManger : MonoBehaviour
 
     [SerializeField] TMP_Text[] Names;
     [SerializeField] TMP_Text[] Score;
-    // Start is called before the first frame update
+    // Show all the top 3 players
     void Start()
     {
         int i = 0;

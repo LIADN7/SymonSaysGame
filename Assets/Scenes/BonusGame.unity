@@ -246,7 +246,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3d60c8a540975f742afe482f682aee3f, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 80e1b7ae42de4974cbd310ba71077b92, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.3
   m_Pitch: 1
@@ -377,7 +377,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 343661009}
-        m_TargetAssemblyTypeName: GameFlow, Assembly-CSharp
+        m_TargetAssemblyTypeName: BonusGameFlow, Assembly-CSharp
         m_MethodName: playerTurn
         m_Mode: 3
         m_Arguments:
@@ -710,8 +710,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 179481862}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.7, z: -4}
-  m_LocalScale: {x: 1.3333334, y: 1.3333334, z: 1}
+  m_LocalPosition: {x: 0, y: 0.61, z: -2.1}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 487960822}
@@ -758,7 +758,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4a1673607038bac4fbdb71ce7238706e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 771e0f33101d4e940b62fd90e2b29ba3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -810,19 +810,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 343661007}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3c27650579cfe04da6eb1a9040eaf4a, type: 3}
+  m_Script: {fileID: 11500000, guid: 9c99ec2a7d21f2a43bf49a7df0254442, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 935076186}
   secondsText: {fileID: 1122949812}
   playerNameText: {fileID: 493050821}
   Buttons:
+  - {fileID: 1693268234}
+  - {fileID: 758227260}
+  - {fileID: 39239546}
   - {fileID: 1863436021}
   - {fileID: 1299349925}
-  - {fileID: 39239546}
-  - {fileID: 758227260}
   - {fileID: 487960813}
-  - {fileID: 1693268234}
 --- !u!1 &378545169
 GameObject:
   m_ObjectHideFlags: 0
@@ -851,12 +851,12 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1693268240}
+  - {fileID: 758227269}
+  - {fileID: 39239555}
   - {fileID: 1863436028}
   - {fileID: 1299349934}
-  - {fileID: 39239555}
-  - {fileID: 758227269}
   - {fileID: 487960822}
-  - {fileID: 1693268240}
   m_Father: {fileID: 479316620}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1088,7 +1088,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: a14ec64370b85e046983abf581c7b6e7, type: 3}
+  m_audioClip: {fileID: 8300000, guid: dbc303a6bd16cc241b32a7c6037a86da, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.3
   m_Pitch: 1
@@ -1219,13 +1219,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 343661009}
-        m_TargetAssemblyTypeName: GameFlow, Assembly-CSharp
+        m_TargetAssemblyTypeName: BonusGameFlow, Assembly-CSharp
         m_MethodName: playerTurn
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 4
+          m_IntArgument: 5
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1282,7 +1282,7 @@ RectTransform:
   m_Children:
   - {fileID: 179481863}
   m_Father: {fileID: 378545170}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1534,7 +1534,7 @@ Transform:
   m_GameObject: {fileID: 538569052}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.6, z: -4}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 758227269}
@@ -1581,7 +1581,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 720b705afb258aa49b513e14ca8c2b1f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5e19304be40fd6d4fbf6888816f6ae7a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1882,7 +1882,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: a2a2eeb7642786e4cbd485f4f94886c5, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 58ea29de23b18714eadeda4d8fe63ef3, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.3
   m_Pitch: 1
@@ -2013,13 +2013,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 343661009}
-        m_TargetAssemblyTypeName: GameFlow, Assembly-CSharp
+        m_TargetAssemblyTypeName: BonusGameFlow, Assembly-CSharp
         m_MethodName: playerTurn
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2076,7 +2076,7 @@ RectTransform:
   m_Children:
   - {fileID: 538569053}
   m_Father: {fileID: 378545170}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2108,8 +2108,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 846521089}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.6, z: -4}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.06, y: 0.57, z: -4}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 39239555}
@@ -2156,7 +2156,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 66c40db9a4217e74f9de8c4964678e54, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 749bc8d558a24784983a77597761c596, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2752,7 +2752,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: df796ee43d6e27545b66470e8a052731, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 1844d75e52655d6419cba086f7aca4c6, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.3
   m_Pitch: 1
@@ -2883,13 +2883,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 343661009}
-        m_TargetAssemblyTypeName: GameFlow, Assembly-CSharp
+        m_TargetAssemblyTypeName: BonusGameFlow, Assembly-CSharp
         m_MethodName: playerTurn
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2946,7 +2946,7 @@ RectTransform:
   m_Children:
   - {fileID: 1844110694}
   m_Father: {fileID: 378545170}
-  m_RootOrder: 1
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3062,8 +3062,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1477119969}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.6, z: -4}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0.55, z: -4}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1863436028}
@@ -3110,7 +3110,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f16ec2b6b3fa24f45912cc7488905f20, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ebdb6e951ad01f54b8bb4dfa8faf7f3b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3462,7 +3462,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 1e5d99f889c11b14891702e0f660baf7, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 7955cba39bbedc04c9da0f03856d8dde, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.3
   m_Pitch: 1
@@ -3562,7 +3562,7 @@ RectTransform:
   m_Children:
   - {fileID: 1751821177}
   m_Father: {fileID: 378545170}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3614,13 +3614,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 343661009}
-        m_TargetAssemblyTypeName: GameFlow, Assembly-CSharp
+        m_TargetAssemblyTypeName: BonusGameFlow, Assembly-CSharp
         m_MethodName: playerTurn
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 5
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3688,8 +3688,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1751821176}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.7, z: -4}
-  m_LocalScale: {x: 1.3333334, y: 1.3333334, z: 1}
+  m_LocalPosition: {x: 0, y: 0.75, z: -4}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1693268240}
@@ -3736,7 +3736,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7d4ffa3a26e5ab74d8cc010faac7d1d5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: df665c56cc3f88b4cb6b1a2d92fe2289, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3863,8 +3863,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1844110693}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.6, z: -4}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.05, y: 0.6, z: -4}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1299349934}
@@ -3911,7 +3911,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ed8e7a516843aa14386fab40738866b7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e8228912be05484438c8e54eb00fd67f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4045,7 +4045,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 6eda313e227ba0542ac8c7b2c386d0d0, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d6c7fe168a04e7b42b70db7b8f8dcb42, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.3
   m_Pitch: 1
@@ -4176,13 +4176,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 343661009}
-        m_TargetAssemblyTypeName: GameFlow, Assembly-CSharp
+        m_TargetAssemblyTypeName: BonusGameFlow, Assembly-CSharp
         m_MethodName: playerTurn
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -4201,7 +4201,7 @@ RectTransform:
   m_Children:
   - {fileID: 1477119970}
   m_Father: {fileID: 378545170}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4417,12 +4417,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1990941484}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f747a53299cd2184e8b4f6ba53d9cab7, type: 3}
+  m_Script: {fileID: 11500000, guid: 2933e99e5a05e5e48b453f363d63ff0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   BG: {fileID: 1926336417}
   lastCall: {fileID: 1632266226}
-  flowObj: {fileID: 343661007}
+  BonusFlowObj: {fileID: 343661007}
   timerObj: {fileID: 59110870}
 --- !u!1001 &2143925947
 PrefabInstance:

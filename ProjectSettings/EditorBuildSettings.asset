@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LeadBoard.unity
     guid: 94c64faaa6112ae4ea76ae0dbe0b674c
+  - enabled: 1
+    path: Assets/Scenes/BonusGame.unity
+    guid: 3876fc65793608541b86d03cc290d8e6
   m_configObjects: {}
